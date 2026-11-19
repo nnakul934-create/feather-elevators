@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown, Calculator, ShieldCheck, Sparkles, CheckCircle2, FileText, ChevronRight } from 'lucide-react';
 import BrandLogo from './BrandLogo';
+import { sitePath } from '../utils/sitePath';
 
 const contentContainer = {
   hidden: {},
@@ -63,7 +64,7 @@ export default function Hero() {
     <section
       id="home"
       className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-cover bg-center pt-24 pb-16 sm:pt-28 sm:pb-20"
-      style={{ backgroundImage: "url('/Web%203.webp')" }}
+      style={{ backgroundImage: `url('${sitePath('Web 3.webp')}')` }}
     >
       <LiftDoors />
 
@@ -135,7 +136,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/quotation"
+              href={sitePath('/quotation')}
               className="flex items-center justify-center gap-2 w-full sm:w-auto rounded-full border border-brand-gold/30 bg-black/40 px-6 py-4 text-xs sm:text-sm font-semibold uppercase tracking-[0.18em] text-brand-gold transition hover:bg-brand-gold/10"
             >
               <FileText className="h-4 w-4" />

@@ -1,5 +1,6 @@
 import { useState, type KeyboardEvent, type MouseEvent } from 'react';
 import { X, Phone, Mail } from 'lucide-react';
+import { sitePath } from '../utils/sitePath';
 
 type BrandLogoProps = {
   compact?: boolean;
@@ -9,7 +10,7 @@ type BrandLogoProps = {
 
 export default function BrandLogo({ compact = false, href, zoomable = false }: BrandLogoProps) {
   const [isZoomed, setIsZoomed] = useState(false);
-  const logoSrc = '/logo.png';
+  const logoSrc = sitePath('logo.png');
 
   const handleLogoClick = (event: MouseEvent<HTMLImageElement>) => {
     if (!zoomable) return;

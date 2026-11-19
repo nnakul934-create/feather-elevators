@@ -4,6 +4,7 @@ import { saveAs } from 'file-saver';
 import { useMemo, useState } from 'react';
 import { ArrowLeft, FileDown, ShieldCheck, CheckCircle2, Sparkles, Building, User, IndianRupee, Layers } from 'lucide-react';
 import BrandLogo from '../components/BrandLogo';
+import { sitePath } from '../utils/sitePath';
 
 export default function AdminQuote() {
   const [customer, setCustomer] = useState('');
@@ -90,7 +91,7 @@ export default function AdminQuote() {
 
   const generateQuotation = async () => {
     try {
-      const response = await fetch('/quotation.docx');
+      const response = await fetch(sitePath('/quotation.docx'));
       const content = await response.arrayBuffer();
 
       const zip = new PizZip(content);
@@ -144,7 +145,7 @@ export default function AdminQuote() {
         {/* Top Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/10">
           <a
-            href="/"
+            href={sitePath('/')}
             className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white hover:border-brand-gold hover:text-brand-gold transition w-fit"
           >
             <ArrowLeft className="h-4 w-4" />

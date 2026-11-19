@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, FileDown, ArrowRight, MessageCircle, ShieldCheck, Sparkles, Calculator } from 'lucide-react';
 import BrandLogo from './BrandLogo';
+import { sitePath } from '../utils/sitePath';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -91,7 +92,7 @@ export default function NavBar() {
             </a>
 
             <a
-              href="/brochure.pdf"
+              href={sitePath('/brochure.pdf')}
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold transition hover:bg-brand-gold hover:text-black"
@@ -208,7 +209,7 @@ export default function NavBar() {
               </div>
 
               <a
-                href="/brochure.pdf"
+                href={sitePath('/brochure.pdf')}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center justify-center gap-2 w-full rounded-2xl bg-white/5 border border-brand-gold/30 py-3.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-gold hover:bg-brand-gold hover:text-black transition"

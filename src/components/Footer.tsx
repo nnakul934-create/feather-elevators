@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, ShieldCheck, ArrowUp, Lock, FileDown } from 'lucide-react';
 import BrandLogo from './BrandLogo';
+import { sitePath } from '../utils/sitePath';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -80,12 +81,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/quotation" className="hover:text-brand-gold transition">
+                <a href={sitePath('/quotation')} className="hover:text-brand-gold transition">
                   Client Quotation Portal
                 </a>
               </li>
               <li>
-                <a href="/brochure.pdf" target="_blank" rel="noreferrer" className="hover:text-brand-gold transition flex items-center gap-1">
+                <a href={sitePath('/brochure.pdf')} target="_blank" rel="noreferrer" className="hover:text-brand-gold transition flex items-center gap-1">
                   <FileDown className="h-3 w-3" /> Download Brochure
                 </a>
               </li>
@@ -121,7 +122,7 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Feather Elevators. All rights reserved.</p>
 
           <div className="flex items-center gap-4">
-            <a href="/admin" className="hover:text-brand-gold transition flex items-center gap-1">
+            <a href={sitePath('/admin')} className="hover:text-brand-gold transition flex items-center gap-1">
               <Lock className="h-3 w-3" /> Staff Portal
             </a>
             <span>•</span>

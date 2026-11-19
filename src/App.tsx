@@ -16,6 +16,7 @@ import Footer from './components/Footer';
 import MobileBottomBar from './components/MobileBottomBar';
 import AdminLoginModal from './components/AdminLoginModal';
 import { Sparkles, Award, Shield, CheckCircle } from 'lucide-react';
+import { sitePath } from './utils/sitePath';
 
 const features = [
   {
@@ -66,7 +67,7 @@ const services: Service[] = [
     category: 'Residential Luxury',
     description:
       'Whisper-quiet permanent-magnet gearless traction engineered for luxury duplexes and multi-level residences with zero civil machine rooms.',
-    image: '/residental.jpg',
+    image: sitePath('residental.jpg'),
     badge: 'Most Popular',
     specs: ['0.4 - 1.0 m/s Speed', 'Zero Machine Room', 'Single Phase 220V', 'Up to G+6 Floors'],
   },
@@ -75,7 +76,7 @@ const services: Service[] = [
     category: 'Ultra-Low Pit',
     description:
       'Whisper-quiet hydraulic powerpack systems with gravity descent safety. Requires only 100mm pit depth, making it the premier choice for retrofit bungalows.',
-    image: '/Hydraulic-lift.jpg',
+    image: sitePath('Hydraulic-lift.jpg'),
     badge: '100mm Low Pit',
     specs: ['100mm Pit Depth', 'Gravity Lowering', 'Compact Powerpack', 'Fits Stairwell Voids'],
   },
@@ -84,7 +85,7 @@ const services: Service[] = [
     category: 'Architectural Showpiece',
     description:
       'Floor-to-ceiling curved toughened glass cars that fill your villa with light and offer panoramic 360-degree views of your interior courtyard or atrium.',
-    image: '/costom.webp',
+    image: sitePath('costom.webp'),
     badge: 'Bespoke Luxury',
     specs: ['Curved Safety Glass', 'Frameless Glass Doors', 'Minimalist Steel Cage', 'Daylight Infusion'],
   },
@@ -93,7 +94,7 @@ const services: Service[] = [
     category: 'Retrofit Engineering',
     description:
       'Custom engineered vertical mobility designed specifically for existing built homes without disrupting existing architectural foundations or structural beams.',
-    image: '/300.webp',
+    image: sitePath('300.webp'),
     badge: 'Zero Demolition',
     specs: ['Tailor-made Shafts', 'Self-Supporting Structure', 'Rapid 7-Day Install', '10-Year Guarantee'],
   },
@@ -107,7 +108,7 @@ const projects: Project[] = [
     location: 'Sadashivanagar, Bangalore',
     floors: 'G + 3 Floors',
     model: 'Hydraulic Whisper',
-    image: '/600.jpg',
+    image: sitePath('600.jpg'),
   },
   {
     title: 'Architectural Glass Duplex',
@@ -116,7 +117,7 @@ const projects: Project[] = [
     location: 'Indiranagar, Bangalore',
     floors: 'G + 2 Floors',
     model: 'Panoramic Capsule',
-    image: '/e200.webp',
+    image: sitePath('e200.webp'),
   },
   {
     title: 'Heritage Courtyard Retrofit',
@@ -125,7 +126,7 @@ const projects: Project[] = [
     location: 'Jubilee Hills, Hyderabad',
     floors: 'G + 2 Floors',
     model: 'Low-Pit MRL',
-    image: '/300.webp',
+    image: sitePath('300.webp'),
   },
   {
     title: 'The Obsidian Penthouse',
@@ -134,7 +135,7 @@ const projects: Project[] = [
     location: 'Whitefield, Bangalore',
     floors: 'Duplex Penthouse',
     model: 'Gearless MRL',
-    image: '/500.jpg',
+    image: sitePath('500.jpg'),
   },
   {
     title: 'Palm Beach Residence',
@@ -143,7 +144,7 @@ const projects: Project[] = [
     location: 'Chennai ECR Villa',
     floors: 'G + 1 Floor',
     model: 'Panoramic Glass',
-    image: '/400.png',
+    image: sitePath('400.png'),
   },
   {
     title: 'The Continental Villa',
@@ -152,7 +153,7 @@ const projects: Project[] = [
     location: 'Koramangala, Bangalore',
     floors: 'G + 3 Floors',
     model: 'MRL Luxury',
-    image: '/costom.webp',
+    image: sitePath('costom.webp'),
   },
 ];
 

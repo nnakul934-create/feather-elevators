@@ -1,4 +1,5 @@
 import { Phone, MessageCircle, Calculator, FileDown } from 'lucide-react';
+import { sitePath } from '../utils/sitePath';
 
 export default function MobileBottomBar() {
   return (
@@ -35,7 +36,7 @@ export default function MobileBottomBar() {
 
         {/* Brochure */}
         <a
-          href="/brochure.pdf"
+          href={sitePath('/brochure.pdf')}
           target="_blank"
           rel="noreferrer"
           className="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl bg-white/5 active:bg-white/10 text-white/90 transition text-center"

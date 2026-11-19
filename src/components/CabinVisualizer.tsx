@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, Eye, CheckCircle2, Shield, ArrowRight } from 'lucide-react';
+import { sitePath } from '../utils/sitePath';
 
 const cabinThemes = [
   {
     id: 'gold',
     name: 'The Imperial Gold',
     category: 'Signature Luxury',
-    image: '/600.jpg',
+    image: sitePath('600.jpg'),
     description:
       'Brushed champagne gold stainless steel with warm perimeter illumination and mirror-finish accents.',
     specifications: {
@@ -22,7 +23,7 @@ const cabinThemes = [
     id: 'glass',
     name: 'The Crystal Panorama',
     category: 'Architectural Glass',
-    image: '/e200.webp',
+    image: sitePath('e200.webp'),
     description:
       'Curved and flat laminated safety glass creating an airy, light-filled focal point inside your residence.',
     specifications: {
@@ -37,7 +38,7 @@ const cabinThemes = [
     id: 'noir',
     name: 'The Modern Noir',
     category: 'Contemporary Minimalist',
-    image: '/500.jpg',
+    image: sitePath('500.jpg'),
     description:
       'Deep titanium black with moody atmospheric lighting, designed for contemporary architectural duplexes.',
     specifications: {
@@ -52,7 +53,7 @@ const cabinThemes = [
     id: 'bespoke',
     name: 'The Villa Heritage',
     category: 'Bespoke Custom',
-    image: '/residental.jpg',
+    image: sitePath('residental.jpg'),
     description:
       'Rich natural Burmese teak wood veneer harmonized with warm bronze detailing and soft fabric textures.',
     specifications: {

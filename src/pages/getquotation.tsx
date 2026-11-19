@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ArrowLeft, Download, FileText, Search, Phone, MessageCircle, ShieldCheck, CheckCircle2 } from 'lucide-react';
 import BrandLogo from '../components/BrandLogo';
+import { sitePath } from '../utils/sitePath';
 
 export default function GetQuotation() {
   const [query, setQuery] = useState('');
@@ -19,7 +20,7 @@ export default function GetQuotation() {
 
     // Attempt PDF download
     const link = document.createElement('a');
-    link.href = `/quotations/${cleanQuery}.pdf`;
+    link.href = sitePath(`/quotations/${cleanQuery}.pdf`);
     link.download = `${cleanQuery}.pdf`;
     link.click();
 
@@ -34,7 +35,7 @@ export default function GetQuotation() {
     <div
       className="min-h-screen text-white flex flex-col justify-between p-4 sm:p-8 md:p-12 bg-cover bg-center relative"
       style={{
-        backgroundImage: "url('/background.jpg')",
+        backgroundImage: `url('${sitePath('background.jpg')}')`,
       }}
     >
       {/* Background Dark Overlay */}
@@ -43,7 +44,7 @@ export default function GetQuotation() {
       {/* Top Header */}
       <div className="relative z-10 mx-auto max-w-5xl w-full flex items-center justify-between pb-8">
         <a
-          href="/"
+          href={sitePath('/')}
           className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white hover:border-brand-gold hover:text-brand-gold hover:bg-white/15 transition"
         >
           <ArrowLeft className="h-4 w-4" />
@@ -110,7 +111,7 @@ export default function GetQuotation() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="/brochure.pdf"
+                href={sitePath('/brochure.pdf')}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-4 py-3 text-xs font-semibold text-brand-cream hover:border-brand-gold hover:text-brand-gold hover:bg-white/10 transition"
